@@ -28,3 +28,6 @@ PRODUCT_COPY_FILES += \
     vendor/lean/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    vendor/lean/overlay/common
