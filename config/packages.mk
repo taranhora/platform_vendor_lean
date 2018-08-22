@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Copyright (C) 2018 The LeanOS-Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,7 +19,8 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     messaging \
-    WellbeingPrebuilt
+    WellbeingPrebuilt \
+    messaging
 
 #ifeq ($(AOSIP_BUILDTYPE), Official)
 #    PRODUCT_PACKAGES += \
@@ -28,6 +28,12 @@ PRODUCT_PACKAGES += \
 #endif
 
  # Required packages
+# Turbo
+PRODUCT_PACKAGES += \
+    Turbo \
+    turbo.xml
+
+# Filesystems tools
 PRODUCT_PACKAGES += \
     BluetoothExt \
     Calendar \
