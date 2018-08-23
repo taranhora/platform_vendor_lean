@@ -30,4 +30,5 @@ endif
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    vendor/lean/overlay/common
+    vendor/lean/overlay/common \
+    vendor/lean/overlay/themes
