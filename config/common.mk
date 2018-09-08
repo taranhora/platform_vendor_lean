@@ -39,3 +39,42 @@ $(call inherit-product, vendor/lean/config/bootanimation.mk)
 # Apns
  PRODUCT_COPY_FILES += \
      vendor/lean/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+
+# Versioning
+include vendor/lean/config/version.mk
+
+# Omni Poor Man Themes
+PRODUCT_PACKAGES += \
+    DocumentsUITheme \
+    DialerTheme \
+    TelecommTheme
+
+ PRODUCT_PACKAGES += \
+    NotificationsDark \
+    NotificationsLight \
+    NotificationsPrimary
+
+ PRODUCT_PACKAGES += \
+    AccentSluttyPink \
+    AccentPixel \
+    AccentGoldenShower \
+    AccentDeepOrange \
+    AccentOmni \
+    AccentWhite \
+    AccentTeal \
+    AccentFromHell \
+    AccentBlueMonday \
+    AccentSmokingGreen \
+    AccentDeadRed \
+    AccentRottenOrange \
+    AccentDeepPurple
+
+ PRODUCT_PACKAGES += \
+    PrimaryAlmostBlack \
+    PrimaryBlack \
+    PrimaryOmni \
+    PrimaryWhite \
+    PrimaryColdWhite \
+    PrimaryWarmWhite \
+    PrimaryDarkBlue
+
