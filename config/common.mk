@@ -39,3 +39,12 @@ $(call inherit-product, vendor/lean/config/bootanimation.mk)
 # Apns
  PRODUCT_COPY_FILES += \
      vendor/lean/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+
+# Versioning
+include vendor/lean/config/version.mk
+
+# Accents
+include vendor/lean/config/accents.mk
+
+# Themes
+include vendor/lean/config/themes.mk
