@@ -1,3 +1,12 @@
 # Themes
 PRODUCT_PACKAGES += \
-    SystemDark
+    SettingsDark \
+    SettingsIntelligenceDark \
+    SystemDark \
+    UserOne \
+    UserTwo \
+    UserThree \
+    UserFour \
+    UserFive \
+    UserSix \
+    UserSeven
