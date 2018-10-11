@@ -32,3 +32,7 @@ endif
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/lean/overlay/common \
     vendor/lean/overlay/themes
+
+# Bootanimation
+$(call inherit-product, vendor/lean/config/bootanimation.mk)
+
