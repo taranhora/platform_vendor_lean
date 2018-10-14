@@ -14,6 +14,7 @@
 # Required packages
 PRODUCT_PACKAGES += \
     Gallery2 \
+    Lean \
     LatinIME \
     Launcher3 \
     LiveWallpapers \
