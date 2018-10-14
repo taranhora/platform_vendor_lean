@@ -12,31 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LEAN_MOD_VERSION = 9.0
+PRODUCT_BRAND ?= Lean
 
- ifeq ($(LEAN_BETA),true)
-    LEAN_BUILD_TYPE := BETA
+# Versioning System
+# Lean version over here.
+PRODUCT_VERSION_MAJOR = v1.0
+PRODUCT_VERSION_MINOR = GuessIDontKnow
+LEAN_POSTFIX := -$(shell date +"%Y%m%d")
+
+ifndef LEAN_BUILD_TYPE
+    LEAN_BUILD_TYPE := Unofficial
 endif
 
- CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
-
- LIST = $(shell curl -s https://raw.githubusercontent.com/LeanOS-Project/platform_vendor_lean/lean-9.x/lean.devices)
-FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
-ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
-    IS_OFFICIAL=true
-    LEAN_BUILD_TYPE := OFFICIAL
+ifdef LEAN_BUILD_EXTRA
+    LEAN_POSTFIX := -$(LEAN_BUILD_EXTRA)
+    LEAN_MOD_SHORT := LeanOS-$(PRODUCT_VERSION_MAJOR)-$(LEAN_BUILD)-$(LEAN_BUILD_TYPE)$(LEAN_POSTFIX)
 else
-    LEAN_BUILD_TYPE := UNOFFICIAL
+    LEAN_MOD_SHORT := LeanOS-$(PRODUCT_VERSION_MAJOR)-$(LEAN_BUILD)-$(LEAN_BUILD_TYPE)
 endif
 
- LEAN_VERSION := LEANOS-$(LEAN_MOD_VERSION)-$(CURRENT_DEVICE)-$(LEAN_BUILD_TYPE)-$(shell date -u +%Y%m%d)
+LEAN_VERSION := LeanOS-$(PRODUCT_VERSION_MAJOR)-$(LEAN_BUILD)-$(LEAN_BUILD_TYPE)$(LEAN_POSTFIX)
 
- PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-  ro.lean.version=$(LEAN_VERSION) \
-  ro.lean.releasetype=$(LEAN_BUILD_TYPE) \
-  ro.mod.version=$(LEAN_MOD_VERSION)
-
- LEAN_DISPLAY_VERSION := LEANOS-$(LEAN_MOD_VERSION)-$(LEAN_BUILD_TYPE)
-
- PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-  ro.lean.display.version=$(LEAN_DISPLAY_VERSION)
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
