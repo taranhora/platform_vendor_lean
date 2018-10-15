@@ -36,3 +36,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Bootanimation
 $(call inherit-product, vendor/lean/config/bootanimation.mk)
 
+# Apns
+ PRODUCT_COPY_FILES += \
+     vendor/lean/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml

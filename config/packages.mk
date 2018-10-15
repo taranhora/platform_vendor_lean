@@ -11,8 +11,31 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+# Required packages
+PRODUCT_PACKAGES += \
+    Gallery2 \
+    Lean \
+    LatinIME \
+    Launcher3 \
+    LiveWallpapers \
+    LiveWallpapersPicker \
+    messaging \
+    WellbeingPrebuilt \
+    messaging
+
+#ifeq ($(AOSIP_BUILDTYPE), Official)
+#    PRODUCT_PACKAGES += \
+#        Updater
+#endif
 
  # Required packages
+# Turbo
+PRODUCT_PACKAGES += \
+    Turbo \
+    turbo.xml \
+    privapp-permissions-turbo.xml
+
+# Filesystems tools
 PRODUCT_PACKAGES += \
     BluetoothExt \
     Calendar \
