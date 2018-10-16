@@ -77,6 +77,7 @@ PRODUCT_PACKAGES += \
     PrimaryBlack \
     PrimaryXtended \
     PrimaryXtendedClear \
+    PrimaryEyeSoother \
     PrimaryOmni \
     PrimaryWhite \
     PrimaryColdWhite \
