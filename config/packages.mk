@@ -111,6 +111,13 @@ PRODUCT_PACKAGES += \
     procrank
 endif
 
+# QS tile styles
+PRODUCT_PACKAGES += \
+    QStileCircleTrim \
+    QStileDefault \
+    QStileDualToneCircle \
+    QStileSquircleTrim
+
  # Charger images
 PRODUCT_PACKAGES += \
     charger_res_images
