@@ -1,36 +1,24 @@
-# Copyright (C) 2017 AospExtended ROM
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-PRODUCT_BRAND ?= Lean
-
-# Versioning System
-# Lean version over here.
-PRODUCT_VERSION_MAJOR = v1.0
-PRODUCT_VERSION_MINOR = GuessIDontKnow
-LEAN_POSTFIX := -$(shell date +"%Y%m%d")
-
+#Lean first version.
+PRODUCT_VERSION_MAJOR = 9.0
+PRODUCT_VERSION_MAINTENANCE = LoL
+LEAN_POSTFIX := $(shell date +"%Y%m%d")
+LEAN_BUILD_EXTRA := By-Team-Lean
 ifndef LEAN_BUILD_TYPE
-    LEAN_BUILD_TYPE := Unofficial
+    LEAN_BUILD_TYPE := UNOFFICIAL
 endif
 
-ifdef LEAN_BUILD_EXTRA
-    LEAN_POSTFIX := -$(LEAN_BUILD_EXTRA)
-    LEAN_MOD_SHORT := LeanOS-$(PRODUCT_VERSION_MAJOR)-$(LEAN_BUILD)-$(LEAN_BUILD_TYPE)$(LEAN_POSTFIX)
-else
-    LEAN_MOD_SHORT := LeanOS-$(PRODUCT_VERSION_MAJOR)-$(LEAN_BUILD)-$(LEAN_BUILD_TYPE)
-endif
+# Set all versions
+LEAN_VERSION := LeanOS-$(LEAN_BUILD)-$(PRODUCT_VERSION_MAINTENANCE)-$(LEAN_BUILD_TYPE)-$(LEAN_POSTFIX)
+LEAN_MOD_VERSION := LeanOS-$(LEAN_BUILD)-$(PRODUCT_VERSION_MAINTENANCE)-$(LEAN_BUILD_TYPE)-$(LEAN_POSTFIX)
+LEAN_XTRA_VERSION := $(PRODUCT_VERSION_MAINTENANCE)-$(LEAN_BUILD_TYPE)
+LEAN_DISPLAY_VERSION := $(LEAN_XTRA_VERSION)
 
-LEAN_VERSION := LeanOS-$(PRODUCT_VERSION_MAJOR)-$(LEAN_BUILD)-$(LEAN_BUILD_TYPE)$(LEAN_POSTFIX)
+PRODUCT_PROPERTY_OVERRIDES += \
+    BUILD_DISPLAY_ID=$(BUILD_ID) \
+    lean.ota.version=$(PRODUCT_VERSION_MAJOR)-$(PRODUCT_VERSION_MAINTENANCE) \
+    ro.lean.version=$(LEAN_XTRA_VERSION) \
+    ro.modversion=$(LEAN_MOD_VERSION) \
+    ro.lean.buildtype=$(LEAN_BUILD_TYPE) \
+    ro.lean.display.version=$(LEAN_DISPLAY_VERSION) \
+    com.lean.fingerprint=$(LEAN_XTRA_VERSION)
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
