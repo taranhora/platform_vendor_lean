@@ -21,7 +21,8 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     messaging \
     WellbeingPrebuilt \
-    messaging
+    messaging \
+    OmniStyle
 
 #ifeq ($(AOSIP_BUILDTYPE), Official)
 #    PRODUCT_PACKAGES += \
