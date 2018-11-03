@@ -134,7 +134,10 @@ PRODUCT_PACKAGES += \
     QStileNinja \
     QStilePokesign \
     QStileWavey \
-    QStileSquaremedo
+    QStileSquaremedo \
+    QStileOreo \
+    QStileOreoCircleTrim \
+    QStileOreoSquircleTrim
 
  # Charger images
 PRODUCT_PACKAGES += \
