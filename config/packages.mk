@@ -20,8 +20,8 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     messaging \
+    SubstratumSignature \
     WellbeingPrebuilt \
-    messaging \
     OmniStyle \
     WallpaperPickerGoogle
 
