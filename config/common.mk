@@ -49,7 +49,6 @@ PRODUCT_PACKAGES += \
     DialerTheme \
     TelecommTheme
 
-
  PRODUCT_PACKAGES += \
     NotificationsXtended \
     NotificationsBlack \
