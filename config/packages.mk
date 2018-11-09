@@ -22,7 +22,8 @@ PRODUCT_PACKAGES += \
     messaging \
     WellbeingPrebuilt \
     messaging \
-    OmniStyle
+    OmniStyle \
+    WallpaperPickerGoogle
 
 #ifeq ($(AOSIP_BUILDTYPE), Official)
 #    PRODUCT_PACKAGES += \
