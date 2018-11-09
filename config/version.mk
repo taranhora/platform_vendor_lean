@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LEAN_MOD_VERSION = LoL
+LEAN_MOD_VERSION = 9.0
 
 ifndef LEAN_BUILD_TYPE
     LEAN_BUILD_TYPE := UNOFFICIAL
