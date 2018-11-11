@@ -128,12 +128,13 @@ PRODUCT_PACKAGES += \
     QStileDualToneCircle \
     QStileSquircleTrim \
     QStileAttemptMountain \
-    QStileCircleDualTone \
+    QStileCircleDual \
     QStileCircleGradient \
     QStileDottedCircle \
     QStileNinja \
     QStilePokesign \
-    QStileWavey
+    QStileWavey \
+    QStileSquaremedo
 
  # Charger images
 PRODUCT_PACKAGES += \
