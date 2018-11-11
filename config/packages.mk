@@ -28,7 +28,7 @@ PRODUCT_PACKAGES += \
 
 # Weather
 PRODUCT_COPY_FILES += \
-    vendor/lean/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml
+ vendor/lean/prebuilt/common/etc/permissions/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
 
 # Weather
 PRODUCT_PROPERTY_OVERRIDES += \
