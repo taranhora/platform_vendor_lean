@@ -23,7 +23,12 @@ PRODUCT_PACKAGES += \
     SubstratumSignature \
     WellbeingPrebuilt \
     OmniStyle \
-    WallpaperPickerGoogle
+    WallpaperPickerGoogle \
+    WeatherClient
+
+# Weather
+PRODUCT_COPY_FILES += \
+    vendor/lean/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml
 
 #ifeq ($(AOSIP_BUILDTYPE), Official)
 #    PRODUCT_PACKAGES += \
