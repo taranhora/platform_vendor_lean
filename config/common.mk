@@ -87,7 +87,7 @@ PRODUCT_PACKAGES += \
     PrimaryDarkBlue
 
 # Props
-include vendor/lean/config/props.mk
+include vendor/lean/config/lean_props.mk
 
 # Sounds
 include vendor/lean/config/sounds.mk
