@@ -35,6 +35,9 @@ ifeq ($(LEAN_OFFICIAL),true)
       IS_OFFICIAL=true
       LEAN_BUILD_TYPE := OFFICIAL
 
+PRODUCT_PACKAGES += \
+    Updater
+
     else
       LEAN_BUILD_TYPE := UNOFFICIAL
     endif
